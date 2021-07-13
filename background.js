@@ -23,10 +23,7 @@ function domain(info, tab) {
 		var ID = Math.random().toString(36).substr(2, 4);
 		var tabId = tabs[0].id;
 		var email = getHostname(tabs[0].url) + "-" + ID + "@" + catchAllDomain;
-		if(email.substr(0,4) == "www.") {
-			email = email.substr(4, email.length);
-		}
-
+		if(email.substr(0,4) == "www.") email = email.substr(4, email.length);
 		chrome.tabs.sendMessage(tabId, {'funktion': 'paste', 'topaste': email});
 	});
 }
