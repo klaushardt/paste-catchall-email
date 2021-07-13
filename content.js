@@ -17,7 +17,7 @@ function insertAtCaret(text) {
     var txtarea = clickedElement;
     var scrollPos = txtarea.scrollTop;
     var strPos = 0;
-    
+
     strPos = txtarea.selectionStart;
 
     var front = (txtarea.value).substring(0,strPos);  
